@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <circle cx="256" cy="256" r="256" fill="#1565C0"/>
+
+  <!-- Left speech bubble (EN) -->
+  <rect x="28" y="190" width="110" height="70" rx="14" fill="#FFFFFF" opacity="0.9"/>
+  <polygon points="80,260 60,288 100,260" fill="#FFFFFF" opacity="0.9"/>
+  <text x="83" y="234" font-family="Arial" font-weight="700" font-size="28"
+        fill="#1565C0" text-anchor="middle">EN</text>
+
+  <!-- Right speech bubble (JP) -->
+  <rect x="374" y="190" width="110" height="70" rx="14" fill="#FFFFFF" opacity="0.9"/>
+  <polygon points="429,260 409,260 449,288" fill="#FFFFFF" opacity="0.9"/>
+  <text x="429" y="234" font-family="Arial" font-weight="700" font-size="28"
+        fill="#1565C0" text-anchor="middle">JP</text>
+
+  <!-- Bidirectional arrows between bubbles -->
+  <!-- Left arrow → -->
+  <line x1="148" y1="224" x2="200" y2="224" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="200,214 218,224 200,234" fill="white"/>
+  <!-- Right arrow ← -->
+  <line x1="364" y1="248" x2="312" y2="248" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="312,238 294,248 312,258" fill="white"/>
+
+  <!-- Microphone body -->
+  <rect x="221" y="148" width="70" height="120" rx="35" fill="white"/>
+
+  <!-- Microphone arc / stand -->
+  <path d="M 196 258 Q 196 330 256 330 Q 316 330 316 258"
+        stroke="white" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Stand post -->
+  <line x1="256" y1="330" x2="256" y2="368" stroke="white" stroke-width="14" stroke-linecap="round"/>
+  <!-- Base -->
+  <line x1="220" y1="368" x2="292" y2="368" stroke="white" stroke-width="14" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 108x108dp canvas; safe zone is 72x72dp centered (18dp inset each side) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Left speech bubble -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,36 Q12,30 18,30 L42,30 Q48,30 48,36 L48,54 Q48,60 42,60 L28,60 L22,68 L24,60 L18,60 Q12,60 12,54 Z"/>
+
+    <!-- Right speech bubble -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,36 Q60,30 66,30 L90,30 Q96,30 96,36 L96,54 Q96,60 90,60 L84,60 L86,68 L80,60 L66,60 Q60,60 60,54 Z"/>
+
+    <!-- EN text (left bubble) — rendered as bold strokes -->
+    <!-- E: vertical bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M18,36 L18,54 L19.5,54 L19.5,36 Z"/>
+    <!-- E: top bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M18,36 L27,36 L27,37.5 L18,37.5 Z"/>
+    <!-- E: middle bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M18,44.25 L25,44.25 L25,45.75 L18,45.75 Z"/>
+    <!-- E: bottom bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M18,52.5 L27,52.5 L27,54 L18,54 Z"/>
+    <!-- N: left bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M29.5,36 L29.5,54 L31,54 L31,36 Z"/>
+    <!-- N: diagonal -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M29.5,36 L31,36 L40.5,54 L39,54 Z"/>
+    <!-- N: right bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M39,36 L40.5,36 L40.5,54 L39,54 Z"/>
+
+    <!-- JP text (right bubble) — rendered as bold strokes -->
+    <!-- J: top bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M63,36 L72,36 L72,37.5 L63,37.5 Z"/>
+    <!-- J: vertical -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M69.5,36 L69.5,50 Q69.5,54 65.5,54 L63,54 L63,52.5 L65.5,52.5 Q68,52.5 68,50 L68,36 Z"/>
+    <!-- P: vertical bar -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M74,36 L74,54 L75.5,54 L75.5,36 Z"/>
+    <!-- P: top curve (approximated as rect) -->
+    <path android:fillColor="#1565C0"
+          android:pathData="M74,36 Q82,36 82,42 Q82,48 74,48 L74,46.5 Q80.5,46.5 80.5,42 Q80.5,37.5 74,37.5 Z"/>
+
+    <!-- Bidirectional arrows -->
+    <!-- Right arrow (→) at y=76 -->
+    <path android:fillColor="#FFFFFF"
+          android:pathData="M12,74 L50,74 L50,77 L12,77 Z"/>
+    <path android:fillColor="#FFFFFF"
+          android:pathData="M46,70 L54,75.5 L46,81 Z"/>
+    <!-- Left arrow (←) at y=84 -->
+    <path android:fillColor="#FFFFFF"
+          android:pathData="M58,82 L96,82 L96,85 L58,85 Z"/>
+    <path android:fillColor="#FFFFFF"
+          android:pathData="M62,78 L54,83.5 L62,89 Z"/>
+
+    <!-- Microphone body (centered, below bubbles) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,20 Q44,12 54,12 Q64,12 64,20 L64,40 Q64,48 54,48 Q44,48 44,40 Z"/>
+
+    <!-- Microphone arc -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M38,38 Q38,58 54,58 Q70,58 70,38"/>
+
+    <!-- Stand and base -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M54,58 L54,66 M46,66 L62,66"/>
+
+</vector>

@@ -1,0 +1,39 @@
+name: speakeasy_watch
+description: "Real-time English to Japanese speech translator for Wear OS"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  record: ^5.1.0
+  flutter_tts: ^4.0.2
+  dio: ^5.4.0
+  dio_smart_retry: ^6.0.0
+  connectivity_plus: ^6.0.0
+  internet_connection_checker_plus: ^2.0.0
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.3
+  sqflite: ^2.3.3
+  path_provider: ^2.1.4
+  wakelock_plus: ^1.2.10
+  flutter_vibrate: ^1.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mockito: ^5.4.4
+  build_runner: ^2.4.9
+
+dependency_overrides:
+  record_linux: ^1.2.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+    - assets/images/
