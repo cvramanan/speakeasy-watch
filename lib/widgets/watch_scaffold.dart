@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 class WatchScaffold extends StatelessWidget {
@@ -12,6 +13,20 @@ class WatchScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // iOS: full-screen layout with SafeArea and comfortable sizing
+    if (Platform.isIOS) {
+      return Scaffold(
+        backgroundColor: Colors.black,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            child: child,
+          ),
+        ),
+      );
+    }
+
+    // Android (Wear OS): round screen with ClipOval
     return Scaffold(
       backgroundColor: Colors.black,
       body: ClipOval(
