@@ -1281,6 +1281,47 @@ debugPrint('LATENCY total: ${DateTime.now().millisecondsSinceEpoch - t0}ms');
 | Connectivity always shows offline | HTTP probe can't reach `generate_204` | Check watch can reach internet; verify hotspot is active; probe has 4s timeout + 3 retries |
 | App crashes on round screen | Widget overflow outside `ClipOval` | Wrap offending widget in `Flexible` or reduce padding |
 | Build fails after pubspec change | Gradle cache stale | Run `flutter clean && flutter pub get` |
+| iOS app crashes immediately on launch | `AVAudioSession.setActive(true)` conflicts with `flutter_tts` | Removed from AppDelegate — only set category, let TTS manage activation |
+| iOS `flutter run` times out (exit 144) | Dart VM socket blocked over WiFi | Use USB cable or build release mode |
+| iOS app crashes after USB disconnect | Debug build requires VM service connection | Install via `flutter run --release` — no debugger dependency |
+| iOS app stuck with termination assertions | Previous crash left OS holding process state | Wait 30s or restart iPhone; then reinstall |
+| iOS `flutter install` fails mid-install | App was running/crashed during install | Kill old process first, then reinstall |
+
+---
+
+## iOS Deployment Reference
+
+### Build & Install (release — standalone, no USB needed)
+
+```bash
+flutter run --release -d 00008150-001604AE0C01401C \
+  --dart-define=OPENAI_API_KEY=$(grep OPENAI_API_KEY local.properties | cut -d= -f2-)
+# Press 'd' to detach (app stays on phone) or 'q' to quit
+```
+
+### Trust certificate on iPhone (first install only)
+
+Settings → General → VPN & Device Management → Developer App → Trust
+
+### Certificate expiry
+
+| Account type | Certificate valid for |
+|---|---|
+| Free Apple ID | 7 days — reinstall weekly |
+| Paid Apple Developer ($99/yr) | 1 year |
+
+### iOS device IDs
+
+| Device | Flutter UDID | CoreDevice UUID |
+|---|---|---|
+| Venkatrc (iPhone 17) | `00008150-001604AE0C01401C` | `528DFF3A-B024-5656-B371-68A8E4B88003` |
+
+### Verified real-device latency (iPhone 17, iOS 26.1)
+
+| Run | Whisper | GPT-4o-mini | Total |
+|---|---|---|---|
+| 1 | 1578ms | 2694ms | 4339ms |
+| 2 | 1317ms | 1984ms | 3321ms |
 
 ---
 
